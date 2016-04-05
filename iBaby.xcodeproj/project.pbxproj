@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F80EE3211CAD40C0001F05EC /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80EE3201CAD40C0001F05EC /* FBSDKCoreKit.framework */; };
+		F80EE3231CAD41E6001F05EC /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80EE3221CAD41E6001F05EC /* FBSDKLoginKit.framework */; };
+		F80EE3251CAD41ED001F05EC /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80EE3241CAD41ED001F05EC /* FBSDKShareKit.framework */; };
 		F820F8E11CA01CC900D33E65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F820F8E01CA01CC900D33E65 /* AppDelegate.swift */; };
 		F820F8E31CA01CC900D33E65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F820F8E21CA01CC900D33E65 /* ViewController.swift */; };
 		F820F8E61CA01CC900D33E65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F820F8E41CA01CC900D33E65 /* Main.storyboard */; };
@@ -14,6 +17,10 @@
 		F820F8EB1CA01CC900D33E65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F820F8E91CA01CC900D33E65 /* LaunchScreen.storyboard */; };
 		F820F8F61CA01CC900D33E65 /* iBabyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F820F8F51CA01CC900D33E65 /* iBabyTests.swift */; };
 		F820F9011CA01CCA00D33E65 /* iBabyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F820F9001CA01CCA00D33E65 /* iBabyUITests.swift */; };
+		F898FA951CAE652500B0DE13 /* FBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F898FA941CAE652500B0DE13 /* FBViewController.swift */; };
+		F8B42E5E1CA8762A003950C1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B42E5D1CA8762A003950C1 /* SettingsViewController.swift */; };
+		F8D34F511CA18F3D000A262B /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D34F501CA18F3D000A262B /* AddViewController.swift */; };
+		F8FEDCC51CA57B5200CC29E2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8FEDCC41CA57B5200CC29E2 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F80EE3201CAD40C0001F05EC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../FacebookSDKs-iOS-20160316/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		F80EE3221CAD41E6001F05EC /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../FacebookSDKs-iOS-20160316/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		F80EE3241CAD41ED001F05EC /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "../FacebookSDKs-iOS-20160316/FBSDKShareKit.framework"; sourceTree = "<group>"; };
 		F820F8DD1CA01CC900D33E65 /* iBaby.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBaby.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F820F8E01CA01CC900D33E65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F820F8E21CA01CC900D33E65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +57,10 @@
 		F820F8FC1CA01CC900D33E65 /* iBabyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iBabyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F820F9001CA01CCA00D33E65 /* iBabyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iBabyUITests.swift; sourceTree = "<group>"; };
 		F820F9021CA01CCA00D33E65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F898FA941CAE652500B0DE13 /* FBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FBViewController.swift; path = ../FBViewController.swift; sourceTree = "<group>"; };
+		F8B42E5D1CA8762A003950C1 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F8D34F501CA18F3D000A262B /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		F8FEDCC41CA57B5200CC29E2 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F80EE3231CAD41E6001F05EC /* FBSDKLoginKit.framework in Frameworks */,
+				F80EE3211CAD40C0001F05EC /* FBSDKCoreKit.framework in Frameworks */,
+				F80EE3251CAD41ED001F05EC /* FBSDKShareKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,9 +91,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F80EE3131CAD3F93001F05EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F80EE3241CAD41ED001F05EC /* FBSDKShareKit.framework */,
+				F80EE3221CAD41E6001F05EC /* FBSDKLoginKit.framework */,
+				F80EE3201CAD40C0001F05EC /* FBSDKCoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F820F8D41CA01CC900D33E65 = {
 			isa = PBXGroup;
 			children = (
+				F80EE3131CAD3F93001F05EC /* Frameworks */,
 				F820F8DF1CA01CC900D33E65 /* iBaby */,
 				F820F8F41CA01CC900D33E65 /* iBabyTests */,
 				F820F8FF1CA01CCA00D33E65 /* iBabyUITests */,
@@ -97,12 +125,16 @@
 		F820F8DF1CA01CC900D33E65 /* iBaby */ = {
 			isa = PBXGroup;
 			children = (
+				F820F8EC1CA01CC900D33E65 /* Info.plist */,
+				F8D34F501CA18F3D000A262B /* AddViewController.swift */,
 				F820F8E01CA01CC900D33E65 /* AppDelegate.swift */,
+				F8FEDCC41CA57B5200CC29E2 /* DetailViewController.swift */,
+				F898FA941CAE652500B0DE13 /* FBViewController.swift */,
+				F8B42E5D1CA8762A003950C1 /* SettingsViewController.swift */,
 				F820F8E21CA01CC900D33E65 /* ViewController.swift */,
-				F820F8E41CA01CC900D33E65 /* Main.storyboard */,
 				F820F8E71CA01CC900D33E65 /* Assets.xcassets */,
 				F820F8E91CA01CC900D33E65 /* LaunchScreen.storyboard */,
-				F820F8EC1CA01CC900D33E65 /* Info.plist */,
+				F820F8E41CA01CC900D33E65 /* Main.storyboard */,
 			);
 			path = iBaby;
 			sourceTree = "<group>";
@@ -193,6 +225,7 @@
 				TargetAttributes = {
 					F820F8DC1CA01CC900D33E65 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 4FXH36X8RJ;
 					};
 					F820F8F01CA01CC900D33E65 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -258,6 +291,10 @@
 			files = (
 				F820F8E31CA01CC900D33E65 /* ViewController.swift in Sources */,
 				F820F8E11CA01CC900D33E65 /* AppDelegate.swift in Sources */,
+				F898FA951CAE652500B0DE13 /* FBViewController.swift in Sources */,
+				F8D34F511CA18F3D000A262B /* AddViewController.swift in Sources */,
+				F8B42E5E1CA8762A003950C1 /* SettingsViewController.swift in Sources */,
+				F8FEDCC51CA57B5200CC29E2 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,10 +434,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = iBaby/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cuttons.iBaby;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -408,10 +453,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = iBaby/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cuttons.iBaby;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -482,6 +535,7 @@
 				F820F9071CA01CCA00D33E65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F820F9081CA01CCA00D33E65 /* Build configuration list for PBXNativeTarget "iBabyTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +544,7 @@
 				F820F90A1CA01CCA00D33E65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F820F90B1CA01CCA00D33E65 /* Build configuration list for PBXNativeTarget "iBabyUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +553,7 @@
 				F820F90D1CA01CCA00D33E65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
