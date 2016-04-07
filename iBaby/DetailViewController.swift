@@ -127,7 +127,7 @@ class DetailViewController: UIViewController, NSURLSessionDelegate , UITextField
     
     func deleteRecords() {
         
-        let url: NSURL = NSURL(string: "http://www.cuttons.com/delete.php?id=\(giornate!["id"]!)")!
+        let url: NSURL = NSURL(string: "http://www.cuttons.com/json/delete.php?id=\(giornate!["id"]!)")!
         var session: NSURLSession!
         let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
         

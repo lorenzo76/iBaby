@@ -90,10 +90,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         Payed.on =        NSUserDefaults.standardUserDefaults().boolForKey("Payed")
         ThisMonth.on = NSUserDefaults.standardUserDefaults().boolForKey("thisMonth")
-        
-        let downSwipe = UISwipeGestureRecognizer(target: self, action:Selector("handleSwipe"))
-        downSwipe.direction = .Down
-        self.view.addGestureRecognizer(downSwipe)
+
         /*
         let loginButton = FBSDKLoginButton.init()
         loginButton.addTarget(self, action: Selector(loginClicked()), forControlEvents: UIControlEvents.TouchUpInside)
