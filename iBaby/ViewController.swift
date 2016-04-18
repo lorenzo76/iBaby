@@ -298,6 +298,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
  
         
         if segue.identifier == "showDetail" {
+            
             if let indexPath = self.table.indexPathForSelectedRow {
                 if let detViewController = segue.destinationViewController as? DetailViewController {
                     detViewController.giornate = myResults[indexPath.row]

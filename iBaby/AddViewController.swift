@@ -109,6 +109,7 @@ class AddViewController: UIViewController, NSURLSessionDelegate, UIPickerViewDel
     @IBOutlet weak var bsChooser: UISegmentedControl!
     
     
+    @IBOutlet weak var oreView: UIView!
     @IBOutlet weak var ore: UITextField!
     
     @IBAction func AddNewRecord(sender: AnyObject) {
@@ -116,8 +117,19 @@ class AddViewController: UIViewController, NSURLSessionDelegate, UIPickerViewDel
         AddNewSitterRecord()
     }
     
-
+    func textFieldDidBeginEditing(textField: UITextField) {
+       OkView.constant = 215
+       //self.oreView.frame.origin.y = self.oreView.frame.origin.y + 216
+       // ore.frame.origin.y = ore.frame.origin.y - 200
+       
+    }
+    
+    @IBOutlet weak var OkView: NSLayoutConstraint!
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        OkView.constant = 8
+        //ore.frame.origin.y = ore.frame.origin.y + 200
         ore.resignFirstResponder()
         return true
     }

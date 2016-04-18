@@ -10,6 +10,7 @@ import UIKit
 
 class DetailViewController: UIViewController, NSURLSessionDelegate , UITextFieldDelegate {
     
+    @IBOutlet weak var DeleteOre: NSLayoutConstraint!
     //MARK: -Actions
     @IBAction func Paga(sender: AnyObject) {
         //updateRecord()
@@ -36,10 +37,15 @@ class DetailViewController: UIViewController, NSURLSessionDelegate , UITextField
     
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
+        DeleteOre.constant = 15
         hours.resignFirstResponder()
+        
         return true
     }
     
+    func textFieldDidBeginEditing(textField: UITextField) {
+        DeleteOre.constant = 200
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
