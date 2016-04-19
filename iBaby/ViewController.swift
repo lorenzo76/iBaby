@@ -143,7 +143,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateFormat = "YYYY-MM-dd"
+            //dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
             let myDate = dateFormatter.dateFromString(myResults[indexPath.row]["hours_date"]!)
+            let currentDate = NSDate()
+            if currentDate == myDate {
+            cell.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
+                
+            }
             dateFormatter.dateFormat = "EEEE dd MMMM"
             dateFormatter.locale = NSLocale(localeIdentifier: "IT")
             let reversedDate = dateFormatter.stringFromDate(myDate!)
