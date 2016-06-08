@@ -35,20 +35,24 @@ class DetailViewController: UIViewController, NSURLSessionDelegate , UITextField
     var giornate: [String:String]?
     var dataJ = NSMutableData()
     
+    @IBOutlet weak var oreView: NSLayoutConstraint!
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        DeleteOre.constant = 15
+        oreView.constant = 0
         hours.resignFirstResponder()
         
         return true
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
-        DeleteOre.constant = 200
+        if self.view.frame.height - 488 < 216 {
+            oreView.constant = 488-self.view.frame.height
+        }
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+print("\(self.view.frame.height)")
         // Do any additional setup after loading the view.
         
         //nameLabel.text = giornate!["bs_name"]!

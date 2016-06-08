@@ -18,6 +18,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var ThisMonth: UISwitch!
     @IBOutlet weak var Payed: UISwitch!
     @IBOutlet weak var downloadingIndicator: UIActivityIndicatorView!
+    
     @IBAction func toggleThisMonth(sender: AnyObject) {
         if  self.ThisMonth.on {
             NSUserDefaults.standardUserDefaults().setBool(true, forKey:"thisMonth")
@@ -45,6 +46,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         totalizzatore = ["Chiara": 0, "Tatiana":0]
         downloadItems()
     }
+    
     @IBOutlet weak var RefreshButton: UIButton!
     @IBAction func Refresh(sender: AnyObject) {
         
@@ -69,7 +71,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @IBOutlet weak var table: UITableView!
 
-
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action:#selector(ViewController.handleRefresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        
+        return refreshControl
+    }()
+    
+    func handleRefresh(refreshControl: UIRefreshControl) {
+        // Do some reloading of data and update the table view's data source
+        // Fetch more objects from a web service, for example...
+        
+        // Simply adding an object to the data source for this example
+        myResults = []
+        dataJ = NSMutableData()
+        totalizzatore = ["Chiara": 0, "Tatiana":0]
+        downloadItems()
+        
+        self.table.reloadData()
+        refreshControl.endRefreshing()
+    }
+    
     var dataJ = NSMutableData()
     var myResults: [[String:String]] = []
     var totalizzatore: [String:Double] = ["Chiara": 0, "Tatiana":0]
@@ -90,7 +112,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         Payed.on =        NSUserDefaults.standardUserDefaults().boolForKey("Payed")
         ThisMonth.on = NSUserDefaults.standardUserDefaults().boolForKey("thisMonth")
-
+        self.table.addSubview(self.refreshControl)
         /*
         let loginButton = FBSDKLoginButton.init()
         loginButton.addTarget(self, action: Selector(loginClicked()), forControlEvents: UIControlEvents.TouchUpInside)
@@ -145,11 +167,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             dateFormatter.dateFormat = "YYYY-MM-dd"
             //dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
             let myDate = dateFormatter.dateFromString(myResults[indexPath.row]["hours_date"]!)
-            let currentDate = NSDate()
-            if currentDate == myDate {
-            cell.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
-                
+            let currentDate = dateFormatter.stringFromDate(NSDate())
+            
+            if currentDate == myResults[indexPath.row]["hours_date"]! {
+                cell.backgroundColor = UIColor(red: 1, green: 0.5, blue: 0.5, alpha: 1)
+                cell.detailTextLabel?.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+                cell.textLabel?.textColor = UIColor(red:1,green:1,blue:1,alpha:1)
+            } else {
+            
+                if myResults[indexPath.row]["pagato"]! == "1" {
+                    cell.detailTextLabel?.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+                    cell.textLabel?.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+                } else {
+                    cell.detailTextLabel?.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+                    cell.textLabel?.textColor = UIColor(red:0,green:0,blue:0,alpha:1)
+                }
             }
+            
             dateFormatter.dateFormat = "EEEE dd MMMM"
             dateFormatter.locale = NSLocale(localeIdentifier: "IT")
             let reversedDate = dateFormatter.stringFromDate(myDate!)
@@ -184,6 +218,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func downloadItems() {
         //downloadingIndicator.startAnimating()
         let url: NSURL = NSURL(string: "http://www.cuttons.com/json/hours.php")!
+        //let url: NSURL = NSURL(string: "http://itwine.corp.emc.com")!
         var session: NSURLSession!
         let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
         
@@ -219,6 +254,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
         } else {
             print("Data downloaded")
+            let dataString = String(data: dataJ, encoding: NSUTF8StringEncoding)
+            print("\(dataString)")
             self.downloadingIndicator.stopAnimating()
             //print(dataJ)
             if ThisMonth.on {

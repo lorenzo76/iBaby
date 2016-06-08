@@ -54,6 +54,7 @@ class AddViewController: UIViewController, NSURLSessionDelegate, UIPickerViewDel
         }
         
         DataFrom.date = NSDate()
+        
         ore.delegate = self
 
 
@@ -118,7 +119,8 @@ class AddViewController: UIViewController, NSURLSessionDelegate, UIPickerViewDel
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
-       OkView.constant = 215
+        print("\(self.view.frame.height)")
+        OkView.constant = -140
        //self.oreView.frame.origin.y = self.oreView.frame.origin.y + 216
        // ore.frame.origin.y = ore.frame.origin.y - 200
        
@@ -128,9 +130,9 @@ class AddViewController: UIViewController, NSURLSessionDelegate, UIPickerViewDel
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         
-        OkView.constant = 8
+        OkView.constant = 0
         //ore.frame.origin.y = ore.frame.origin.y + 200
-        ore.resignFirstResponder()
+        self.ore.resignFirstResponder()
         return true
     }
     
