@@ -156,11 +156,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath)
+        
+        var cellID:String
         
         if indexPath.section == 1 {
     
-            cell.textLabel?.text = self.myResults[indexPath.row]["bs_name"]
+            
             
             
             let dateFormatter = NSDateFormatter()
@@ -170,34 +171,37 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let currentDate = dateFormatter.stringFromDate(NSDate())
             
             if currentDate == myResults[indexPath.row]["hours_date"]! {
-                cell.backgroundColor = UIColor(red: 1, green: 0.5, blue: 0.5, alpha: 1)
-                cell.detailTextLabel?.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
-                cell.textLabel?.textColor = UIColor(red:1,green:1,blue:1,alpha:1)
+                cellID="TodayCell"
             } else {
             
                 if myResults[indexPath.row]["pagato"]! == "1" {
-                    cell.detailTextLabel?.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
-                    cell.textLabel?.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+                   cellID="PayedCell"
                 } else {
-                    cell.detailTextLabel?.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
-                    cell.textLabel?.textColor = UIColor(red:0,green:0,blue:0,alpha:1)
+                   cellID="myCell"
+                   
                 }
             }
+            let cell = tableView.dequeueReusableCellWithIdentifier(cellID, forIndexPath: indexPath)
+            
+            cell.textLabel?.text = self.myResults[indexPath.row]["bs_name"]
             
             dateFormatter.dateFormat = "EEEE dd MMMM"
             dateFormatter.locale = NSLocale(localeIdentifier: "IT")
             let reversedDate = dateFormatter.stringFromDate(myDate!)
             
             cell.detailTextLabel?.text = "\(reversedDate)"
+            return cell
         } else {
+            let cell = tableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath)
             cell.textLabel?.text = Array(totalizzatore.keys)[indexPath.row]
             let Arraym = Array(totalizzatore.values)
             let defaults = NSUserDefaults.standardUserDefaults()
             pagaOraria = Double(defaults.floatForKey("hourlySalary"))
             cell.detailTextLabel?.text = "\(Arraym[indexPath.row]) | \(Arraym[indexPath.row] * pagaOraria) €"
             //cell.detailTextLabel?.text = Array(totalizzatore.values)
+            return cell
         }
-        return cell
+        
     }
     
     

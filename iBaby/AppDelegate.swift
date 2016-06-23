@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             defaults.setBool(true, forKey: "firstLaunch")
             defaults.setObject(["Tatiana","Chiara"], forKey: "BS")
             defaults.setFloat(8.00, forKey: "hourlySalary")
-            let defaultWeek: [String:String] = ["LUN":"Tatiana","MAR":"Chiara","MER":"Tatiana","GIO":"Free","FRI":"Chiara" ]
+            let defaultWeek: [String:String] = ["LUN":"Chiara","MAR":"Chiara","MER":"Chiara","GIO":"Chiara","FRI":"Chiara" ]
             defaults.setObject (defaultWeek, forKey: "defaultWeeklySchedule")
 
            

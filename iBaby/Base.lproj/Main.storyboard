@@ -75,6 +75,65 @@
                                             <segue destination="Xsw-fM-jZt" kind="showDetail" identifier="showDetail" id="FGQ-P3-dqe"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PayedCell" textLabel="cRq-ml-vUa" detailTextLabel="ztM-t0-86l" imageView="32o-5N-fi6" style="IBUITableViewCellStyleSubtitle" id="M5c-TC-lmA">
+                                        <rect key="frame" x="0.0" y="63" width="560" height="35"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M5c-TC-lmA" id="2H0-vd-Jga">
+                                            <rect key="frame" x="0.0" y="0.0" width="527" height="34.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cRq-ml-vUa">
+                                                    <rect key="frame" x="65" y="1" width="31.5" height="19.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ztM-t0-86l">
+                                                    <rect key="frame" x="65" y="20.5" width="40.5" height="13.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="SplashScreen" id="32o-5N-fi6">
+                                                    <rect key="frame" x="15" y="0.0" width="35" height="34.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Xsw-fM-jZt" kind="showDetail" identifier="showDetail" id="qdN-Cs-tq7"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TodayCell" textLabel="BLw-NV-fMD" detailTextLabel="fZp-y0-IWO" style="IBUITableViewCellStyleSubtitle" id="1bD-Qq-VUX">
+                                        <rect key="frame" x="0.0" y="98" width="560" height="35"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1bD-Qq-VUX" id="HCt-k7-4Ku">
+                                            <rect key="frame" x="0.0" y="0.0" width="527" height="34.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BLw-NV-fMD">
+                                                    <rect key="frame" x="15" y="1" width="31.5" height="19.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fZp-y0-IWO">
+                                                    <rect key="frame" x="15" y="20.5" width="40.5" height="13.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.17254902420000001" green="0.58431375029999999" blue="0.86666667460000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="Xsw-fM-jZt" kind="showDetail" identifier="showDetail" id="eaQ-f4-tb2"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="pwn-y6-97V"/>
@@ -620,7 +679,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="21T-DV-xtG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="627" y="-182.25"/>
+            <point key="canvasLocation" x="522" y="386.25"/>
         </scene>
         <!--Add-->
         <scene sceneID="N5n-Nh-CIa">
@@ -846,6 +905,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="SplashScreen" width="180" height="180"/>
         <image name="home-32" width="32" height="32"/>
         <image name="refresh" width="30" height="30"/>
         <image name="settings-32" width="32" height="32"/>
@@ -853,5 +913,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="s1F-q9-ohn"/>
+        <segue reference="eaQ-f4-tb2"/>
     </inferredMetricsTieBreakers>
 </document>
