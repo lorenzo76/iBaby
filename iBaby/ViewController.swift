@@ -192,12 +192,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.detailTextLabel?.text = "\(reversedDate)"
             return cell
         } else {
-            let cell = tableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath)
+            let cell = tableView.dequeueReusableCellWithIdentifier("sitterCell", forIndexPath: indexPath)
             cell.textLabel?.text = Array(totalizzatore.keys)[indexPath.row]
             let Arraym = Array(totalizzatore.values)
             let defaults = NSUserDefaults.standardUserDefaults()
             pagaOraria = Double(defaults.floatForKey("hourlySalary"))
             cell.detailTextLabel?.text = "\(Arraym[indexPath.row]) | \(Arraym[indexPath.row] * pagaOraria) €"
+            cell.imageView?.image = UIImage(imageLiteral: Array(totalizzatore.keys)[indexPath.row])
             //cell.detailTextLabel?.text = Array(totalizzatore.values)
             return cell
         }
