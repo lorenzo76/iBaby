@@ -48,8 +48,8 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="sitterCell" textLabel="kCU-4M-00g" detailTextLabel="rte-CE-YYJ" imageView="o6n-oC-DRP" style="IBUITableViewCellStyleSubtitle" id="Raz-6B-2Rz">
-                                        <rect key="frame" x="0.0" y="98" width="560" height="35"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="sitterCell" textLabel="kCU-4M-00g" detailTextLabel="rte-CE-YYJ" imageView="o6n-oC-DRP" rowHeight="50" style="IBUITableViewCellStyleSubtitle" id="Raz-6B-2Rz">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Raz-6B-2Rz" id="xwl-6Q-CdD">
                                             <rect key="frame" x="0.0" y="0.0" width="527" height="34.5"/>
@@ -68,13 +68,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Chiara" id="o6n-oC-DRP">
+                                                    <rect key="frame" x="15" y="1" width="32" height="32"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="myCell" textLabel="elJ-lX-vi5" detailTextLabel="rGO-eS-t9n" imageView="jRu-Yw-all" style="IBUITableViewCellStyleSubtitle" id="QKn-id-cS5">
-                                        <rect key="frame" x="0.0" y="28" width="560" height="35"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="myCell" textLabel="elJ-lX-vi5" detailTextLabel="rGO-eS-t9n" imageView="jRu-Yw-all" rowHeight="50" style="IBUITableViewCellStyleSubtitle" id="QKn-id-cS5">
+                                        <rect key="frame" x="0.0" y="63" width="560" height="35"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QKn-id-cS5" id="46c-Fz-mp5">
                                             <rect key="frame" x="0.0" y="0.0" width="527" height="34.5"/>
@@ -84,28 +85,29 @@
                                                     <rect key="frame" x="62" y="1" width="31.5" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rGO-eS-t9n">
                                                     <rect key="frame" x="62" y="20.5" width="40.5" height="13.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="unchecked_checkbox-32" id="jRu-Yw-all">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="unchecked_checkbox-white-32" id="jRu-Yw-all">
                                                     <rect key="frame" x="15" y="1" width="32" height="32"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.29188740253448486" green="0.81520092487335205" blue="0.9124409556388855" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <segue destination="Xsw-fM-jZt" kind="showDetail" identifier="showDetail" id="FGQ-P3-dqe"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PayedCell" textLabel="cRq-ml-vUa" detailTextLabel="ztM-t0-86l" imageView="32o-5N-fi6" style="IBUITableViewCellStyleSubtitle" id="M5c-TC-lmA">
-                                        <rect key="frame" x="0.0" y="63" width="560" height="35"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PayedCell" textLabel="cRq-ml-vUa" detailTextLabel="ztM-t0-86l" imageView="32o-5N-fi6" rowHeight="40" style="IBUITableViewCellStyleSubtitle" id="M5c-TC-lmA">
+                                        <rect key="frame" x="0.0" y="98" width="560" height="35"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M5c-TC-lmA" id="2H0-vd-Jga">
                                             <rect key="frame" x="0.0" y="0.0" width="527" height="34.5"/>
@@ -135,8 +137,8 @@
                                             <segue destination="Xsw-fM-jZt" kind="showDetail" identifier="showDetail" id="qdN-Cs-tq7"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TodayCell" textLabel="BLw-NV-fMD" detailTextLabel="fZp-y0-IWO" imageView="0Ni-cw-3kR" style="IBUITableViewCellStyleSubtitle" id="1bD-Qq-VUX">
-                                        <rect key="frame" x="0.0" y="98" width="560" height="35"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TodayCell" textLabel="BLw-NV-fMD" detailTextLabel="fZp-y0-IWO" imageView="0Ni-cw-3kR" rowHeight="50" style="IBUITableViewCellStyleSubtitle" id="1bD-Qq-VUX">
+                                        <rect key="frame" x="0.0" y="133" width="560" height="35"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1bD-Qq-VUX" id="HCt-k7-4Ku">
                                             <rect key="frame" x="0.0" y="0.0" width="527" height="34.5"/>
@@ -156,7 +158,7 @@
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="unchecked_checkbox-32" id="0Ni-cw-3kR">
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="unchecked_checkbox-white-32" id="0Ni-cw-3kR">
                                                     <rect key="frame" x="15" y="1" width="32" height="32"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </imageView>
@@ -944,7 +946,7 @@
         <image name="refresh" width="30" height="30"/>
         <image name="settings-32" width="32" height="32"/>
         <image name="trash2-50" width="50" height="50"/>
-        <image name="unchecked_checkbox-32" width="32" height="32"/>
+        <image name="unchecked_checkbox-white-32" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="s1F-q9-ohn"/>
