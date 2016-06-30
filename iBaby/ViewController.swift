@@ -19,6 +19,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var Payed: UISwitch!
     @IBOutlet weak var downloadingIndicator: UIActivityIndicatorView!
     
+  
+    @IBAction func Paga(sender: AnyObject) {
+        
+        print("paga")
+        
+    }
+    
     @IBAction func toggleThisMonth(sender: AnyObject) {
         if  self.ThisMonth.on {
             NSUserDefaults.standardUserDefaults().setBool(true, forKey:"thisMonth")
