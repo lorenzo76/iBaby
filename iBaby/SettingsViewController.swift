@@ -43,8 +43,8 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         if section == 0 {
             return bsArray!.count
         } else {
-            let schedule = defaults.objectForKey("defaultWeeklySchedule") as! [String:String]
-            return schedule.count
+            let schedule = defaults.objectForKey("defaultWeeklySchedule") as! NSArray
+            return schedule[0].count
         }
     }
     
@@ -59,9 +59,9 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
             let bsArray = defaults.objectForKey("BS") as! NSArray
             cell.textLabel?.text = bsArray[indexPath.row] as? String
         } else {
-            let schedule2 = defaults.dictionaryForKey("defaultWeeklySchedule") as! [String:String]
-            var sortedSchedule = schedule2.sort({ $0.0 < $1.0 })
-            print(sortedSchedule[0])
+            let schedule2 = defaults.objectForKey("defaultWeeklySchedule") as! NSArray
+            //var sortedSchedule = schedule2.sort({ $0.0 < $1.0 })
+            //print(sortedSchedule[0])
             //let dayCodes = [String](sortedSchedule.keys)
             // dayCodes is ["MON", "TUE"]
             
@@ -70,7 +70,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
             
             
             
-            cell.textLabel?.text = "\(sortedSchedule[indexPath.row].0) - \(sortedSchedule[indexPath.row].1) "
+            cell.textLabel?.text = "\(schedule2[0][indexPath.row].0) - \(schedule2[0][indexPath.row].1) "
         }
         
         return cell
