@@ -63,14 +63,14 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
             //var sortedSchedule = schedule2.sort({ $0.0 < $1.0 })
             //print(sortedSchedule[0])
             //let dayCodes = [String](sortedSchedule.keys)
-            // dayCodes is ["MON", "TUE"]
+            //dayCodes is ["MON", "TUE"]
             
             //let dayBS = [String](sortedSchedule.values)
             // airportNames is ["Toronto Pearson", "London Heathrow"]
             
             
             
-            cell.textLabel?.text = "\(schedule2[0][indexPath.row].0) - \(schedule2[0][indexPath.row].1) "
+            cell.textLabel?.text = "\(schedule2[indexPath.row]) - \(schedule2[indexPath.row]) "
         }
         
         return cell

@@ -13,8 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, NSURLSessionDelegate {
 
     var window: UIWindow?
     var dataJ = NSMutableData()
-    var myResults : NSArray = []
-
+    var myResults = []
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
@@ -51,7 +51,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, NSURLSessionDelegate {
     func downloadItems() {
         //downloadingIndicator.startAnimating()
         let url: NSURL = NSURL(string: "http://www.cuttons.com/json/plan.php")!
-        //let url: NSURL = NSURL(string: "http://itwine.corp.emc.com")!
         var session: NSURLSession!
         let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
         
@@ -88,12 +87,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, NSURLSessionDelegate {
 
     
     
-    func parseJSON() -> NSArray {
+    func parseJSON() -> [[String:String]] {
         
-        var json : NSArray = []
+        var json = [[String:String]]()
         
         do {
-            json = try NSJSONSerialization.JSONObjectWithData (self.dataJ, options:NSJSONReadingOptions.AllowFragments) as! NSArray
+            json = try NSJSONSerialization.JSONObjectWithData (self.dataJ, options:NSJSONReadingOptions.AllowFragments) as! [[String:String]]
         } catch let error as NSError {
             print(error)
         }
