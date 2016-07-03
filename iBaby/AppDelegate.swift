@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, NSURLSessionDelegate {
         // Override point for customization after application launch.
         
         let defaults = NSUserDefaults.standardUserDefaults()
-         downloadItems()
+        downloadItems()
         let defaultWeek = myResults
         defaults.setObject (defaultWeek, forKey: "defaultWeeklySchedule")
         //defaults.setBool(true, forKey: "payed")
@@ -53,11 +53,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, NSURLSessionDelegate {
         let url: NSURL = NSURL(string: "http://www.cuttons.com/json/plan.php")!
         var session: NSURLSession!
         let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
-        
         session = NSURLSession(configuration: configuration, delegate: self, delegateQueue: nil)
-        
         let task = session.dataTaskWithURL(url)
-        
         task.resume()
         
     }
@@ -80,6 +77,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, NSURLSessionDelegate {
             myResults = parseJSON()
             let defaults = NSUserDefaults.standardUserDefaults()
             defaults.setObject (myResults, forKey: "defaultWeeklySchedule")
+            print(defaults.objectForKey("defaultWeeklySchedule"))
+            print(myResults)
         }
             
     }

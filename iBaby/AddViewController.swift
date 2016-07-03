@@ -24,12 +24,12 @@ class AddViewController: UIViewController, NSURLSessionDelegate, UIPickerViewDel
         let todayName = dateFormatter.stringFromDate(NSDate())
         
         let defaults = NSUserDefaults.standardUserDefaults()
-        let schedule = defaults.dictionaryForKey("defaultWeeklySchedule") as! [String:String]
+        let schedule = defaults.objectForKey("defaultWeeklySchedule") as! [[String:String]]
         
-        let dayCodes = [String](schedule.keys)
+        let dayCodes = [String](schedule[0].keys)
         // dayCodes is ["MON", "TUE"]
         
-        let dayBS = [String](schedule.values)
+        let dayBS = [String](schedule[0].values)
         
         // airportNames is ["Toronto Pearson", "London Heathrow"]
        

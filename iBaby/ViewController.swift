@@ -267,7 +267,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         } else {
             print("Data downloaded")
             let dataString = String(data: dataJ, encoding: NSUTF8StringEncoding)
-            print("\(dataString)")
+            //print("\(dataString)")
             self.downloadingIndicator.stopAnimating()
             //print(dataJ)
             if ThisMonth.on {

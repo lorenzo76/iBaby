@@ -44,7 +44,9 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
             return bsArray!.count
         } else {
             let schedule = defaults.objectForKey("defaultWeeklySchedule") as! NSArray
+            print(schedule[0].count)
             return schedule[0].count
+            
         }
     }
     
@@ -59,18 +61,20 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
             let bsArray = defaults.objectForKey("BS") as! NSArray
             cell.textLabel?.text = bsArray[indexPath.row] as? String
         } else {
-            let schedule2 = defaults.objectForKey("defaultWeeklySchedule") as! NSArray
-            //var sortedSchedule = schedule2.sort({ $0.0 < $1.0 })
-            //print(sortedSchedule[0])
-            //let dayCodes = [String](sortedSchedule.keys)
+            let schedule2 = defaults.objectForKey("defaultWeeklySchedule") as! [[String:String]]
+            //print(schedule2)
+            //print(schedule2[0][indexPath.row])
+            var sortedSchedule = schedule2[0].sort({ $0.0 < $1.0 })
+            print(sortedSchedule[0])
+            let dayCodes = [String](schedule2[0].keys)
             //dayCodes is ["MON", "TUE"]
             
-            //let dayBS = [String](sortedSchedule.values)
+            let dayBS = [String](schedule2[0].values)
             // airportNames is ["Toronto Pearson", "London Heathrow"]
             
             
             
-            cell.textLabel?.text = "\(schedule2[indexPath.row]) - \(schedule2[indexPath.row]) "
+            cell.textLabel?.text = "\(dayCodes[indexPath.row]) - \(dayBS[indexPath.row]) "
         }
         
         return cell
